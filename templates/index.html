@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <center>
+                    <h3 class="mt-5">Welcome</h3>
+                    <img src="{{ url_for('video_feed') }}" width="50%">
+                    <input type="text" id="employee"  />
+                </center>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        setInterval(function () {
+            $.ajax({
+            url: "/employee",
+            type: "get",
+            success: function(response) {
+                {#alert(response)#}
+                {#alert(response)#}
+                $('#employee').val(response);
+                if(response !='no'){
+                    {#window.location.href = 'http://localhost/skholla_hrm/?emp=' + response + '';#}
+                }
+            },
+         });
+        }, 1000);
+    });
+</script>
