@@ -28,8 +28,8 @@ known_face_encodings = [
     bradley_face_encoding
 ]
 known_face_names = [
-    "Krish",
-    "Bradley"
+    "harish",
+    "anushya"
 ]
 
 # Initialize some variables
